@@ -6,6 +6,7 @@ public class Node {
     private Node prev;
     private Node next;
 
+
     public Node(int i) {
         setValue(i);
     }
