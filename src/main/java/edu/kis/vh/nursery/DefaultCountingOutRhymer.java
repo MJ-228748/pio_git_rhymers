@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Klasa obsługuje grę w wyliczankę
+ */
 public class DefaultCountingOutRhymer {
 
     private static final int FULL = 11;
@@ -8,25 +11,45 @@ public class DefaultCountingOutRhymer {
 	private final int[] numbers = new int[SIZE];
     public int total = COUNTER;
 
+    /**
+     * Funkcja wprowadza liczbę do tablicy
+     * @param in
+     */
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
+    /**
+     * Funkcja sprawdza czy są elementy w tablicy
+     * @return
+     */
     public boolean callCheck() {
         return total == COUNTER;
     }
 
+    /**
+     *Funkcja sprawdza czy tablica jest pełna
+     * @return
+     */
     public boolean isFull() {
         return total == FULL;
     }
 
+    /**
+     *Funkcja zwraca ostatnią liczbę
+     * @return
+     */
     protected int peekaboo() {
         if (callCheck())
             return COUNTER;
         return numbers[total];
     }
 
+    /**
+     *Funkcja usuwa ostatnią liczbę
+     * @return
+     */
     public int countOut() {
         if (callCheck())
             return COUNTER;
