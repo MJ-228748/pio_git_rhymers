@@ -5,11 +5,18 @@ package edu.kis.vh.nursery;
  */
 public class DefaultCountingOutRhymer {
 
+
+
+
     private static final int FULL = 11;
 	private static final int SIZE = 12;
 	private static final int COUNTER = -1;
 	private final int[] numbers = new int[SIZE];
     public int total = COUNTER;
+
+    public int getTotal() {
+        return total;
+    }
 
     /**
      * Funkcja wprowadza liczbę do tablicy
@@ -40,7 +47,8 @@ public class DefaultCountingOutRhymer {
      *Funkcja zwraca ostatnią liczbę
      * @return
      */
-    protected int peekaboo() {
+
+    int peekaboo() {
         if (callCheck())
             return COUNTER;
         return numbers[total];
