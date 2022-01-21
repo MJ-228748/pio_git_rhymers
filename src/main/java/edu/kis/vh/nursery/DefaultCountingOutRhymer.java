@@ -14,6 +14,10 @@ public class DefaultCountingOutRhymer {
 	private final int[] numbers = new int[SIZE];
     public int total = COUNTER;
 
+    /**
+     * Funkcja zwraca ilość elementów w tablicy
+     * @return
+     */
     public int getTotal() {
         return total;
     }
